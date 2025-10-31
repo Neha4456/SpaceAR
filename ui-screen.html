@@ -10,42 +10,60 @@
         color: #66ccff;
         font-family: sans-serif;
         text-align: center;
+        overflow-y: auto;
       }
 
       h1 {
-        margin: 20px 0;
+        margin: 30px 0 10px;
+        font-size: 2.4rem;
+      }
+
+      p {
+        margin-bottom: 20px;
+        font-size: 1.1rem;
       }
 
       .planet-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 15px;
-        padding: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* fixed larger cards */
+        gap: 80px; /* large spacing */
+        padding: 60px;
         justify-items: center;
       }
 
-      .planet-grid a {
-        text-decoration: none;
-      }
-
       .planet-grid img {
-        width: 160px;
-        height: 160px;
-        border: 2px solid #333;
-        border-radius: 12px;
+        width: 450px; /* much larger */
+        height: 450px;
+        border: 4px solid #333;
+        border-radius: 16px;
         object-fit: cover;
-        transition: transform 0.3s, border-color 0.3s;
+        transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
       }
 
       .planet-grid img:hover {
-        transform: scale(1.1);
+        transform: scale(1.08);
         border-color: #66ccff;
+        box-shadow: 0 0 40px #66ccff80;
       }
 
       .planet-name {
-        margin-top: 8px;
-        font-size: 16px;
+        margin-top: 15px;
+        font-size: 1.4rem;
         color: white;
+      }
+
+      /* 📱 Mobile view */
+      @media (max-width: 700px) {
+        .planet-grid {
+          grid-template-columns: repeat(1, 1fr);
+          gap: 40px;
+          padding: 30px;
+        }
+
+        .planet-grid img {
+          width: 280px;
+          height: 280px;
+        }
       }
     </style>
   </head>
@@ -55,38 +73,38 @@
     <p>Scan these markers to view each planet!</p>
 
     <div class="planet-grid">
-<div>
+      <div>
         <img src="assets/pattern-mercury_marker.png" alt="Mercury Marker" />
         <div class="planet-name">Mercury</div>
-</div>
-<div>
+      </div>
+      <div>
         <img src="assets/pattern-venus_marker.png" alt="Venus Marker" />
         <div class="planet-name">Venus</div>
-</div>
-<div>
+      </div>
+      <div>
         <img src="assets/pattern-earth_marker.png" alt="Earth Marker" />
         <div class="planet-name">Earth</div>
-</div>
-<div>
+      </div>
+      <div>
         <img src="assets/pattern-mars_marker.png" alt="Mars Marker" />
         <div class="planet-name">Mars</div>
-</div>
-<div>
-        <img src="assets/pattern-Jupiter_marker.png" alt="Jupiter Marker" />
+      </div>
+      <div>
+        <img src="assets/pattern-jupiter_marker.png" alt="Jupiter Marker" />
         <div class="planet-name">Jupiter</div>
-</div>
-<div>
-        <img src="assets/pattern-Saturn_marker.png" alt="Saturn Marker" />
+      </div>
+      <div>
+        <img src="assets/pattern-saturn_marker.png" alt="Saturn Marker" />
         <div class="planet-name">Saturn</div>
-</div>
-<div>
+      </div>
+      <div>
         <img src="assets/pattern-uranus_marker.png" alt="Uranus Marker" />
         <div class="planet-name">Uranus</div>
-</div>
-<div>
+      </div>
+      <div>
         <img src="assets/pattern-neptune_marker.png" alt="Neptune Marker" />
         <div class="planet-name">Neptune</div>
-</div>
+      </div>
     </div>
   </body>
 </html>
