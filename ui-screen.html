@@ -4,31 +4,14 @@
   <script src="https://raw.githack.com/jeromeetienne/AR.js/2.1.4/aframe/build/aframe-ar.js"></script>
   <body style="margin: 0px; overflow: hidden">
     <a-scene embedded arjs>
-	<!-- Saturn -->
-	<a-marker type="pattern" url="assets/pattern-Saturn_marker.patt"> 
+       <a-marker type="pattern" url="pattern-Jupiter_marker.patt"> 
         <a-entity 
           animation="property: rotation; to: 0 0 360; loop: true; dur: 10000; easing: linear">
           <a-entity 
             rotation="-90 0 0"
 			>
             <a-entity 
-              gltf-model="assets/saturn_model.glb" 
-              scale="0.01 0.01 0.01" 
-              position="0 0 0">
-            </a-entity>
-          </a-entity>
-        </a-entity>
-      </a-marker>
-	  
-	  <!-- Jupiter -->
-       <a-marker type="pattern" url="assets/pattern-Jupiter_marker.patt"> 
-        <a-entity 
-          animation="property: rotation; to: 0 0 360; loop: true; dur: 10000; easing: linear">
-          <a-entity 
-            rotation="-90 0 0"
-			>
-            <a-entity 
-              gltf-model="assets/jupiter_model.glb" 
+              gltf-model="realistic_jupiter.glb" 
               scale="0.01 0.01 0.01" 
               position="0 0 0">
             </a-entity>
