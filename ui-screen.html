@@ -1,24 +1,92 @@
 <!DOCTYPE html>
-<html>
-  <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
-  <script src="https://raw.githack.com/jeromeetienne/AR.js/2.1.4/aframe/build/aframe-ar.js"></script>
-  <body style="margin: 0px; overflow: hidden">
-    <a-scene embedded arjs>
-       <a-marker type="pattern" url="pattern-Jupiter_marker.patt"> 
-        <a-entity 
-          animation="property: rotation; to: 0 0 360; loop: true; dur: 10000; easing: linear">
-          <a-entity 
-            rotation="-90 0 0"
-			>
-            <a-entity 
-              gltf-model="realistic_jupiter.glb" 
-              scale="0.01 0.01 0.01" 
-              position="0 0 0">
-            </a-entity>
-          </a-entity>
-        </a-entity>
-      </a-marker>
-      <a-entity camera></a-entity>
-    </a-scene>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Solar System AR Markers</title>
+    <style>
+      body {
+        margin: 0;
+        background: radial-gradient(circle at center, #0a0a1a, #000);
+        color: #66ccff;
+        font-family: sans-serif;
+        text-align: center;
+      }
+
+      h1 {
+        margin: 20px 0;
+      }
+
+      .planet-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        padding: 20px;
+        justify-items: center;
+      }
+
+      .planet-grid a {
+        text-decoration: none;
+      }
+
+      .planet-grid img {
+        width: 160px;
+        height: 160px;
+        border: 2px solid #333;
+        border-radius: 12px;
+        object-fit: cover;
+        transition: transform 0.3s, border-color 0.3s;
+      }
+
+      .planet-grid img:hover {
+        transform: scale(1.1);
+        border-color: #66ccff;
+      }
+
+      .planet-name {
+        margin-top: 8px;
+        font-size: 16px;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Solar System AR Markers 🌌</h1>
+    <p>Scan these markers using each planet’s AR page!</p>
+
+    <div class="planet-grid">
+<div>
+        <img src="marker-images/mercury-marker.png" alt="Mercury Marker" />
+        <div class="planet-name">Mercury</div>
+</div>
+<div>
+        <img src="marker-images/venus-marker.png" alt="Venus Marker" />
+        <div class="planet-name">Venus</div>
+</div>
+<div>
+        <img src="marker-images/earth-marker.png" alt="Earth Marker" />
+        <div class="planet-name">Earth</div>
+</div>
+<div>
+        <img src="marker-images/mars-marker.png" alt="Mars Marker" />
+        <div class="planet-name">Mars</div>
+</div>
+<div>
+        <img src="assets/pattern-Jupiter_marker.png" alt="Jupiter Marker" />
+        <div class="planet-name">Jupiter</div>
+</div>
+<div>
+        <img src="assets/pattern-Saturn_marker.png" alt="Saturn Marker" />
+        <div class="planet-name">Saturn</div>
+</div>
+<div>
+        <img src="marker-images/uranus-marker.png" alt="Uranus Marker" />
+        <div class="planet-name">Uranus</div>
+</div>
+<div>
+        <img src="marker-images/neptune-marker.png" alt="Neptune Marker" />
+        <div class="planet-name">Neptune</div>
+</div>
+    </div>
   </body>
 </html>
