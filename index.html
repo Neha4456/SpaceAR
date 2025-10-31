@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
-    <script src="https://raw.githack.com/jeromeetienne/AR.js/2.1.4/aframe/build/aframe-ar.js"></script>
-  </head>
-  <body style="margin: 0; overflow: hidden;">
+  <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+  <script src="https://raw.githack.com/jeromeetienne/AR.js/2.1.4/aframe/build/aframe-ar.js"></script>
+  <body style="margin: 0px; overflow: hidden">
     <a-scene embedded arjs>
       <a-marker preset="hiro">
-        <a-entity
-          gltf-model="realistic_jupiter.glb"
-          scale="0.005 0.005 0.005"
-          rotation="-90 0 0"
-          animation="property: rotation; to: 0 0 360; loop: true; dur: 10000; easing: linear">
+        <a-entity 
+          animation="property: rotation; to: 0 0 360; loop: true; dur: 10000; easing: linear"
+		  rotation="-90 0 0">
+            <a-entity 
+              gltf-model="realistic_jupiter.glb" 
+              scale="0.05 0.05 0.05" 
+              position="0 0 0">
+            </a-entity>
         </a-entity>
       </a-marker>
       <a-entity camera></a-entity>
