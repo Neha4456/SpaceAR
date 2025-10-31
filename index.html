@@ -4,15 +4,63 @@
   <script src="https://raw.githack.com/jeromeetienne/AR.js/2.1.4/aframe/build/aframe-ar.js"></script>
   <body style="margin: 0px; overflow: hidden">
     <a-scene embedded arjs>
-	<!-- Saturn -->
-	<a-marker type="pattern" url="assets/pattern-Saturn_marker.patt"> 
+	<!-- Mercury -->
+	<a-marker type="pattern" url="assets/pattern-mercury_marker.patt"> 
         <a-entity 
           animation="property: rotation; to: 0 0 360; loop: true; dur: 10000; easing: linear">
           <a-entity 
             rotation="-90 0 0"
 			>
             <a-entity 
-              gltf-model="assets/saturn_model.glb" 
+              gltf-model="assets/mercury_model.glb" 
+              scale="0.5 0.5 0.5" 
+              position="0 0 0">
+            </a-entity>
+          </a-entity>
+        </a-entity>
+      </a-marker>
+	  
+	  <!-- Venus -->
+	<a-marker type="pattern" url="assets/pattern-venus_marker.patt"> 
+        <a-entity 
+          animation="property: rotation; to: 0 0 360; loop: true; dur: 10000; easing: linear">
+          <a-entity 
+            rotation="-90 0 0"
+			>
+            <a-entity 
+              gltf-model="assets/venus_model.glb" 
+              scale="0.5 0.5 0.5" 
+              position="0 0 0">
+            </a-entity>
+          </a-entity>
+        </a-entity>
+      </a-marker>
+	  
+	  <!-- Earth -->
+	<a-marker type="pattern" url="assets/pattern-earth_marker.patt"> 
+        <a-entity 
+          animation="property: rotation; to: 0 0 360; loop: true; dur: 10000; easing: linear">
+          <a-entity 
+            rotation="-90 0 0"
+			>
+            <a-entity 
+              gltf-model="assets/earth_model.glb" 
+              scale="0.5 0.5 0.5" 
+              position="0 0 0">
+            </a-entity>
+          </a-entity>
+        </a-entity>
+      </a-marker>
+	  
+	  <!-- Mars -->
+	<a-marker type="pattern" url="assets/pattern-mars_marker.patt"> 
+        <a-entity 
+          animation="property: rotation; to: 0 0 360; loop: true; dur: 10000; easing: linear">
+          <a-entity 
+            rotation="-90 0 0"
+			>
+            <a-entity 
+              gltf-model="assets/mars_model.glb" 
               scale="0.5 0.5 0.5" 
               position="0 0 0">
             </a-entity>
@@ -35,6 +83,55 @@
           </a-entity>
         </a-entity>
       </a-marker>
+	<!-- Saturn -->
+	<a-marker type="pattern" url="assets/pattern-Saturn_marker.patt"> 
+        <a-entity 
+          animation="property: rotation; to: 0 0 360; loop: true; dur: 10000; easing: linear">
+          <a-entity 
+            rotation="-90 0 0"
+			>
+            <a-entity 
+              gltf-model="assets/saturn_model.glb" 
+              scale="0.5 0.5 0.5" 
+              position="0 0 0">
+            </a-entity>
+          </a-entity>
+        </a-entity>
+      </a-marker>
+	  
+	  <!-- Uranus -->
+	<a-marker type="pattern" url="assets/pattern-uranus_marker.patt"> 
+        <a-entity 
+          animation="property: rotation; to: 0 0 360; loop: true; dur: 10000; easing: linear">
+          <a-entity 
+            rotation="-90 0 0"
+			>
+            <a-entity 
+              gltf-model="assets/uranus_model.glb" 
+              scale="0.5 0.5 0.5" 
+              position="0 0 0">
+            </a-entity>
+          </a-entity>
+        </a-entity>
+      </a-marker>
+	  
+	  <!-- Neptune -->
+	<a-marker type="pattern" url="assets/pattern-neptune_marker.patt"> 
+        <a-entity 
+          animation="property: rotation; to: 0 0 360; loop: true; dur: 10000; easing: linear">
+          <a-entity 
+            rotation="-90 0 0"
+			>
+            <a-entity 
+              gltf-model="assets/neptune_model.glb" 
+              scale="0.5 0.5 0.5" 
+              position="0 0 0">
+            </a-entity>
+          </a-entity>
+        </a-entity>
+      </a-marker>
+	  
+	  
       <a-entity camera></a-entity>
     </a-scene>
   </body>
